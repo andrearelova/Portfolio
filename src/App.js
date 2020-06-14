@@ -3,8 +3,6 @@ import "./App.css"
 
 function App() {
 
-
-
   return (
     <div className="App">
       <div className="HeaderBar">
@@ -25,9 +23,12 @@ function App() {
         <h3>Latest Projects:</h3>
       </div>
       <footer className="FooterBar">
+      <div className="FooterElement">
         <h3>About Me</h3>
         <h3>Contact</h3>
         <h3>Resume</h3>
+        </div>
+        <div className="FooterFiller"/>
       </footer>
     </div>
   );
