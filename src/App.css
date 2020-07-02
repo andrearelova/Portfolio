@@ -73,12 +73,23 @@
   color: #ffefd5;
   font-size: 20px;
 }
+
+.FooterButtons:hover {
+    color: #949598;
+}
+
+.linkText{
+  text-decoration: none;
+  color: #ffefd5;
+}
+
 .FooterElement {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
+
 .FooterFiller{
   flex-grow: 4;
 }
