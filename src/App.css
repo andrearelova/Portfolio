@@ -16,34 +16,40 @@
   font-family: "Baskerville";
   font-size: 12px;
   color: #0c3566;
+  position: sticky;
+}
+
+.Content{
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .Welcome {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 150px;
   font-family: "Avenir Next";
   font-style: italic;
-  font-size: 105px;
+  font-size: 150px;
   text-align: center;
   color: #0c3566;
 }
 
 .Welcome2 {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 140px;
   left: -10px;
   font-family: "Avenir Next";
   font-style: italic;
-  font-size: 105px;
+  font-size: 150px;
   text-align: center;
   color: #949598;
 }
 
 .Tagline {
   text-align: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 350px;
   font-family: "Baskerville";
@@ -54,12 +60,67 @@
 .Latest{
   font-family: "Avenir Next";
   font-style: italic;
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 450px;
   text-align: center;
   font-size: 23px;
   color: #0c3566;
+}
+
+.Projects1{
+  font-family: "Avenir Next";
+  font-style: italic;
+  position: fixed;
+  text-align: left;
+  font-size: 20px;
+  color: #0c3566;
+  top: 490px;
+  left: 20vh;
+}
+
+.Projects2{
+  font-family: "Avenir Next";
+  font-style: italic;
+  position: fixed;
+  text-align: left;
+  font-size: 20px;
+  color: #0c3566;
+  top: 530px;
+  left: 20vh;
+}
+
+.Projects3{
+  font-family: "Avenir Next";
+  font-style: italic;
+  position: fixed;
+  text-align: left;
+  font-size: 20px;
+  color: #0c3566;
+  top: 570px;
+  left: 20vh;
+}
+
+.Projects4{
+  font-family: "Avenir Next";
+  font-style: italic;
+  position: fixed;
+  text-align: left;
+  font-size: 20px;
+  color: #0c3566;
+  top: 610px;
+  left: 20vh;
+}
+
+.Projects5{
+  font-family: "Avenir Next";
+  font-style: italic;
+  position: fixed;
+  text-align: left;
+  font-size: 20px;
+  color: #0c3566;
+  top: 650px;
+  left: 20vh;
 }
 
 .FooterBar {
@@ -68,14 +129,13 @@
   background-color: #0c3566;
   height: 100px;
   width: 100%;
-  position: sticky;
   display: flex;
   color: #ffefd5;
   font-size: 20px;
 }
 
 .FooterButtons:hover {
-    color: #949598;
+  color: #949598;
 }
 
 .linkText{

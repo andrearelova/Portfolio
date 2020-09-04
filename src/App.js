@@ -36,24 +36,23 @@ function App() {
         <h1>Andrea Relova</h1>
         <h1>2020</h1>
       </div>
-      <div className="Welcome2">
-        <h2>welcome!</h2>
-      </div>
-      <div className="Welcome">
-        <h2>welcome!</h2>
-      </div>
-      <div className="Tagline">
-        <p>My name is Andrea Relova. I'm a computer science <br></br>student at the University of Florida.</p>
-      </div>
-      <div className="Latest">
-        <h3>Latest Projects:</h3>
+      <div className="Content">
+        <h1 className="Welcome2">welcome!</h1>
+        <h1 className="Welcome">welcome!</h1>
+        <p className="Tagline">My name is Andrea Relova. I'm a computer science student at the University of Florida.<br></br>I strongly believe that design can be beautiful and useful and I<br></br>plan on pursuing a career that helps me find the intersection of both.</p>
+        <h3 className="Latest">Latest Projects:</h3>
+        <h3 className="Projects1">Six:</h3>
+        <h3 className="Projects2">DailyUI:</h3>
+        <h3 className="Projects3">Portfolio (This Website):</h3>
+        <h3 className="Projects4">Some Other Designs:</h3>
+        <h3 className="Projects5">More Projects Coming Soon!</h3>      
       </div>
       <footer className="FooterBar">
       <div className="FooterElement">
         <h3 className="FooterButtons">About Me</h3>
         <h3 className="FooterButtons" onClick={()=>{setDialogOpen(true)}}>Contact Me</h3>
         <a href="AndreaRelova.pdf" target="blank" className="linkText">
-        <h3 className="FooterButtons" > Resume</h3>
+        <h3 className="FooterButtons"> Resume</h3>
         </a>
         </div>
         <div className="FooterFiller"/>
