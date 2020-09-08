@@ -1,6 +1,6 @@
 .App {
   background-color: #ffefd5;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -9,8 +9,9 @@
   background-color: #ffefd5;
   display: flex;
   flex-grow: 1;
+  height: 4vh;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 1vh;
   margin-left: 70px;
   margin-right: 70px;
   font-family: "Baskerville";
@@ -20,14 +21,23 @@
 }
 
 .Content{
+  height:85vh;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-
-.Welcome {
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  top: 150px;
+}
+.WelcomeWrapper {
+  margin-top: 10vh;
+  width: 100%;
+  position: relative;
+}
+.Welcome {
+  position: absolute;
+  width: 100%;
+  top: 10px;
   font-family: "Avenir Next";
   font-style: italic;
   font-size: 150px;
@@ -36,9 +46,8 @@
 }
 
 .Welcome2 {
-  position: fixed;
+  position: absolute;
   width: 100%;
-  top: 140px;
   left: -10px;
   font-family: "Avenir Next";
   font-style: italic;
@@ -49,85 +58,53 @@
 
 .Tagline {
   text-align: center;
-  position: fixed;
   width: 100%;
-  top: 350px;
+  margin-top: 25vh;
   font-family: "Baskerville";
   font-size: 23px;
   color: #0c3566;
+  margin-bottom: 3vh;
 }
 
 .Latest{
   font-family: "Avenir Next";
   font-style: italic;
-  position: fixed;
   width: 100%;
-  top: 450px;
   text-align: center;
   font-size: 23px;
   color: #0c3566;
 }
 
-.Projects1{
+.Projects{
   font-family: "Avenir Next";
   font-style: italic;
-  position: fixed;
-  text-align: left;
   font-size: 20px;
   color: #0c3566;
-  top: 490px;
-  left: 20vh;
+  margin-left: 10vw;
+  text-align: left;
 }
 
-.Projects2{
-  font-family: "Avenir Next";
-  font-style: italic;
-  position: fixed;
-  text-align: left;
-  font-size: 20px;
-  color: #0c3566;
-  top: 530px;
-  left: 20vh;
+.ProjectsCard{
+  width: 60vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  display: flex;
+  align-items: center;
 }
 
-.Projects3{
-  font-family: "Avenir Next";
-  font-style: italic;
-  position: fixed;
-  text-align: left;
+.ProjectsContent{
+  font-family: "Baskerville";
+  background-color: #0c3566;
+  width: 100%;
+  color: #ffefd5;
   font-size: 20px;
-  color: #0c3566;
-  top: 570px;
-  left: 20vh;
-}
-
-.Projects4{
-  font-family: "Avenir Next";
-  font-style: italic;
-  position: fixed;
-  text-align: left;
-  font-size: 20px;
-  color: #0c3566;
-  top: 610px;
-  left: 20vh;
-}
-
-.Projects5{
-  font-family: "Avenir Next";
-  font-style: italic;
-  position: fixed;
-  text-align: left;
-  font-size: 20px;
-  color: #0c3566;
-  top: 650px;
-  left: 20vh;
 }
 
 .FooterBar {
   text-align: left;
   font-family: "Baskerville";
   background-color: #0c3566;
-  height: 100px;
+  height: 10vh;
   width: 100%;
   display: flex;
   color: #ffefd5;

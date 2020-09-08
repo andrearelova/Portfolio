@@ -1,6 +1,10 @@
 import React, {useState} from "react";
 import "./App.css"
-import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardMedia from '@material-ui/core/CardMedia';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import Slide from '@material-ui/core/Slide';
@@ -37,15 +41,25 @@ function App() {
         <h1>2020</h1>
       </div>
       <div className="Content">
+      <div className="WelcomeWrapper">
         <h1 className="Welcome2">welcome!</h1>
         <h1 className="Welcome">welcome!</h1>
-        <p className="Tagline">My name is Andrea Relova. I'm a computer science student at the University of Florida.<br></br>I strongly believe that design can be beautiful and useful and I<br></br>plan on pursuing a career that helps me find the intersection of both.</p>
+      </div>
+        <p className="Tagline">My name is Andrea Relova. I'm a computer science student at the University of Florida.<br></br>I strongly believe that design can be both beautiful and accessible and I<br></br>plan on pursuing a career that helps me find the intersection of both.</p>
         <h3 className="Latest">Latest Projects:</h3>
-        <h3 className="Projects1">Six:</h3>
-        <h3 className="Projects2">DailyUI:</h3>
-        <h3 className="Projects3">Portfolio (This Website):</h3>
-        <h3 className="Projects4">Some Other Designs:</h3>
-        <h3 className="Projects5">More Projects Coming Soon!</h3>      
+        <h3 className="Projects">Six:</h3>
+        <Card className="ProjectsCard" variant="outlined">
+          <CardActionArea>
+            <CardMedia image="./Six.png" title="Six Screenshot"/>
+            <CardContent className="ProjectsContent">
+              <p>hi</p>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <h3 className="Projects">DailyUI:</h3>
+        <h3 className="Projects">Portfolio (This Website):</h3>
+        <h3 className="Projects">Some Other Designs:</h3>
+        <h3 className="Projects">More Projects Coming soon!</h3>
       </div>
       <footer className="FooterBar">
       <div className="FooterElement">
