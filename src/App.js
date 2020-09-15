@@ -5,10 +5,8 @@ import {
     BrowserRouter as Router,
     Route,
     Switch,
-    Link
 } from "react-router-dom";
-import {Dialog, DialogContent, Slide, TextField, Button} from "@material-ui/core"
-import emailjs from 'emailjs-com';
+import {Dialog, DialogContent, Slide} from "@material-ui/core"
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -50,7 +48,7 @@ function App() {
       description: "This was a group diagram made for my User Experience Design class."
     },
   ]
-  
+
   const Landing = () => (
     <div className="App">
     <Dialog open={aboutOpen} onClose={() => {setAboutOpen(false)}} TransitionComponent={Transition}>
@@ -76,7 +74,7 @@ function App() {
           <a className="Link" key={index} href={project.link} target="blank">
           <div className="Project">
             <h3 className="Projects">{project.name}</h3>
-              <img src={project.img} className="ProjectsMedia"/>
+              <img src={project.img} alt="" className="ProjectsMedia"/>
             <p className="ProjectsDescription">{project.description}</p>
           </div>
           </a>
