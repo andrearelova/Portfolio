@@ -116,14 +116,14 @@ function App() {
         {myDesigns.map((myDesign, index)=>
           <div className="Project">
           <h3 className="Projects">{myDesign.name}</h3>
-          <img src={myDesign.img} className="DesignsMedia"/>
+          <img src={myDesign.img} alt="" className="DesignsMedia"/>
           <p className="ProjectsDescription">{myDesign.description}</p>
           </div>
         )}
         <h3 className="DiversiphiTitle">Diversiphi Rush Infographic</h3>
-        <img src="diversity-rush1.png" className="Diversiphi"/>
-        <img src="diversity-rush2.png" className="Diversiphi"/>
-        <img src="diversity-rush3.png" className="Diversiphi"/>
+        <img src="diversity-rush1.png" alt="" className="Diversiphi"/>
+        <img src="diversity-rush2.png" alt="" className="Diversiphi"/>
+        <img src="diversity-rush3.png" alt="" className="Diversiphi"/>
         <p className="DiversiphiDescription">I created this three page infographic for my sorority to provide tips on how to talk about diversity and inclusion during Panhellenic formal sorority recruitment. Diversiphi is my sorority's diversity and inclusion committee where I serve as one of the Innovation Chairs.</p>
       </div>
       <footer className="FooterBar">
