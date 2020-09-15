@@ -1,6 +1,13 @@
 import React, {useState} from "react";
 import "./App.css"
-import {Dialog, DialogContent, Slide, Grid, TextField, Button} from "@material-ui/core"
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Link
+} from "react-router-dom";
+import {Dialog, DialogContent, Slide, TextField, Button} from "@material-ui/core"
+import emailjs from 'emailjs-com';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -11,6 +18,7 @@ function App() {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const userID = process.env.REACT_APP_USER_ID;
   const projects = [
     {
       name:"Six:",
@@ -21,8 +29,8 @@ function App() {
     {
       name:"DailyUI (Currently in Progress):",
       img:"DailyUI2.png",
-      description:"DailyUI is an email subscription service that gives users a design prompt everyday, such as a landing page or an app icon. The picture above is from Day 2's prompt, which was to design a checkout page. My designs were made with Adobe XD.",
-      link:""
+      description:"DailyUI is an email subscription service that gives users a design prompt everyday, such as a landing page or an app icon. The picture above is from Day 2's prompt, which was to design a checkout page. My designs were made with Adobe XD and are viewable on Dribbble.",
+      link:"https://dribbble.com/andrearelova"
     },
     {
       name:"Portfolio (This Website):",
@@ -32,29 +40,34 @@ function App() {
     },
     {
       name:"Some Other Designs:",
-      img:"",
-      description:"These are some other designs I have made, either for myself, friends, or some school organizations I am involved in. The details, as well as the software used to make each one, is specified above.",
-      link:""
+      img:"OtherDesigns.svg",
+      description:"These are some other designs I have made, either for myself, friends or some school organizations I am involved in.",
+      link:"/designs"
+    },
+  ]
+  const myDesigns = [
+    {
+      name:"Design Process Diagram",
+      img:"DesignProcess.png",
+      description: "This was a group diagram made for my User Experience Design class."
     },
   ]
   const handleContactClose = () => {
     setContactOpen(false);
   }
-  const submitEmail = (e) => {
+  const submitEmail = async (e) => {
     e.preventDefault();
-
-
-
+    emailjs.send("service_2ekna0n", "template_0zqvn5j", {email, message}, userID);
     handleContactClose();
   }
-  return (
+  const Landing = () => (
     <div className="App">
       <Dialog open={contactOpen} onClose={handleContactClose} TransitionComponent={Transition}>
         <DialogContent className="ContactMe">
         <h1>Send a message to andreamrelova@gmail.com:</h1>
-        <form  className="ContactForm" onSubmit={submitEmail} >
-          <TextField id="outlined-basic" label="Your Email" required={true} value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
-          <TextField id="outlined-basic" label="Message" required={true} value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
+        <form className="ContactForm" onSubmit={(e) => submitEmail(e)}>
+          <TextField variant="standard" label="Your Email" required={true} value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+          <TextField variant="standard" label="Message" required={true} value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
           <Button type="submit">Send</Button>
         </form>
         </DialogContent>
@@ -84,29 +97,71 @@ function App() {
       </div>
       <footer className="FooterBar">
       <div className="FooterElement">
-        <h3 className="FooterButtons"onClick={()=>{setAboutOpen(true)}}>About Me</h3>
-        <h3 className="FooterButtons" onClick={()=>{setContactOpen(true)}}>Contact Me</h3>
+        <h3 className="FooterButtons"onClick={()=>{setAboutOpen(true)}}>About Me  </h3>
+        <h3 className="FooterButtons" onClick={()=>{setContactOpen(true)}}>  Contact Me</h3>
         <a href="AndreaRelova.pdf" target="blank" className="linkText">
-          <h3 className="FooterButtons"> Resume</h3>
+          <h3 className="FooterButtons">  Resume</h3>
         </a>
         <a href="https://github.com/andrearelova" target="blank" className="linkText">
-          <h3 className="FooterButtons"> GitHub</h3>
+          <h3 className="FooterButtons">  GitHub</h3>
         </a>
         <a href="https://www.linkedin.com/in/andrea-relova-206163194/" target="blank" className="linkText">
-          <h3 className="FooterButtons"> LinkedIn</h3>
+          <h3 className="FooterButtons">  LinkedIn</h3>
         </a>
         <a href="https://dribbble.com/andrearelova" target="blank" className="linkText">
-          <h3 className="FooterButtons"> Dribbble</h3>
+          <h3 className="FooterButtons">  Dribbble</h3>
         </a>
         <Dialog open={aboutOpen} onClose={() => {setAboutOpen(false)}} TransitionComponent={Transition}>
           <DialogContent className="AboutMe">
             <h1 className="AboutMeTitle">About Me</h1>
-            <p className="AboutMeText">I'm a 20 year old computer science major from Jacksonville, Florida. I am also pursuing a minor in linguistics, which I chose because my experience with learning French and Spanish in school led me to realize that my passion for languages lies with learning about the structure, patterns and uses of it and less so with a specific language. I am very interested in interaction design, product design and user experience design and would like to pursue a career in such someday. I realized this because in my computer science projects, I have found the greatest satisfaction and sense of control from the designing portions of them. I continue to work on developing my "eye for design" and my sense of empathy everyday, since being a designer involves one putting themselves in the users' shoes.</p>
+            <p className="AboutMeText">I'm a 20 year old computer science major from Jacksonville, Florida. I am also pursuing a minor in linguistics, which I chose because my experience with learning French and Spanish in school led me to realize that my passion for languages lies with learning about the structure, patterns and uses of it and less so with a specific language. I am very interested in interaction design, product design and user experience design and would like to pursue a career in such someday. I realized this because in my computer science projects, I have found the greatest satisfaction and sense of control from the design portion of the development processes. I continue to work on developing my "eye for design" and my sense of empathy everyday, since being a designer involves one putting themselves in the users' shoes.</p>
           </DialogContent>
         </Dialog>
         </div>
         <div className="FooterFiller"/>
       </footer>
+    </div>
+  );
+  const Designs = () => (
+    <div className="App">
+      <div className="HeaderBar">
+        <h1>Portfolio</h1>
+        <h1>Andrea Relova</h1>
+        <h1>2020</h1>
+      </div>
+      <div className="Content">
+        <h1 className="Latest">Some Other Designs:</h1>
+
+        {myDesigns.map((myDesign, index)=>
+          <div className="Project">
+          <h3 className="Projects">{myDesign.name}</h3>
+          <img src={myDesign.img} className="DesignsMedia"/>
+          <p className="ProjectsDescription">{myDesign.description}</p>
+          </div>
+        )}
+        <h3 className="DiversiphiTitle">Diversiphi Rush Infographic</h3>
+        <img src="diversity-rush1.png" className="Diversiphi"/>
+        <img src="diversity-rush2.png" className="Diversiphi"/>
+        <img src="diversity-rush3.png" className="Diversiphi"/>
+        <p className="DiversiphiDescription">I created this three page infographic for my sorority to provide tips on how to talk about diversity and inclusion during Panhellenic formal sorority recruitment. Diversiphi is my sorority's diversity and inclusion committee where I serve as one of the Innovation Chairs.</p>
+      </div>
+      <footer className="FooterBar">
+        <div className="FooterElement">
+          <a href="/" className="linkText">
+            <h3 className="FooterButtons">Home</h3>
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+  return (
+    <div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Landing}/>
+          <Route path="/designs" component={Designs}/>
+        </Switch>
+      </Router>
     </div>
   );
 }

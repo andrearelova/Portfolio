@@ -64,10 +64,10 @@
   font-family: "Baskerville";
   font-size: 25px;
   color: #0c3566;
-  margin-bottom: 5vh;
 }
 
 .Latest{
+  margin-top: 5vh;
   font-family: "Avenir Next";
   font-style: italic;
   width: 100%;
@@ -85,15 +85,18 @@
   width: 100%;
   padding-bottom: 3vh;
 }
+
 .Project{
   width: 625px;
 }
+
 .Link{
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .ProjectsMedia{
   width: 625px;
   height: 400px;
@@ -171,4 +174,33 @@
 .ContactForm{
   display: flex;
   flex-direction: column;
+}
+
+.DesignsMedia{
+  width: 625px;
+  height: 400px;
+  padding-bottom: 3vh;
+}
+
+.DiversiphiTitle{
+  font-family: "Avenir Next";
+  font-style: italic;
+  font-size: 25px;
+  color: #0c3566;
+  padding-bottom: 3vh;
+  width: 625px;
+}
+
+.Diversiphi{
+  width: 440px;
+  height: 440px;
+  padding-bottom: 3vh;
+}
+
+.DiversiphiDescription{
+  font-family: "Baskerville";
+  color: #0c3566;
+  font-size: 20px;
+  padding-bottom: 3vh;
+  width: 625px;
 }
