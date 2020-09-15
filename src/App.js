@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./App.css"
+import Contact from "./Contact.js"
 import {
     BrowserRouter as Router,
     Route,
@@ -8,17 +9,14 @@ import {
 } from "react-router-dom";
 import {Dialog, DialogContent, Slide, TextField, Button} from "@material-ui/core"
 import emailjs from 'emailjs-com';
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
+
 function App() {
   const [contactOpen, setContactOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const userID = process.env.REACT_APP_USER_ID;
   const projects = [
     {
       name:"Six:",
@@ -52,26 +50,16 @@ function App() {
       description: "This was a group diagram made for my User Experience Design class."
     },
   ]
-  const handleContactClose = () => {
-    setContactOpen(false);
-  }
-  const submitEmail = async (e) => {
-    e.preventDefault();
-    emailjs.send("service_2ekna0n", "template_0zqvn5j", {email, message}, userID);
-    handleContactClose();
-  }
+  
   const Landing = () => (
     <div className="App">
-      <Dialog open={contactOpen} onClose={handleContactClose} TransitionComponent={Transition}>
-        <DialogContent className="ContactMe">
-        <h1>Send a message to andreamrelova@gmail.com:</h1>
-        <form className="ContactForm" onSubmit={(e) => submitEmail(e)}>
-          <TextField variant="standard" label="Your Email" required={true} value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
-          <TextField variant="standard" label="Message" required={true} value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
-          <Button type="submit">Send</Button>
-        </form>
-        </DialogContent>
-      </Dialog>
+    <Dialog open={aboutOpen} onClose={() => {setAboutOpen(false)}} TransitionComponent={Transition}>
+      <DialogContent className="AboutMe">
+        <h1 className="AboutMeTitle">About Me</h1>
+        <p className="AboutMeText">I'm a 20 year old computer science major from Jacksonville, Florida. I am also pursuing a minor in linguistics, which I chose because my experience with learning French and Spanish in school led me to realize that my passion for languages lies with learning about the structure, patterns and uses of it and less so with a specific language. I am very interested in interaction design, product design and user experience design and would like to pursue a career in such someday. I realized this because in my computer science projects, I have found the greatest satisfaction and sense of control from the design portion of the development process. I hope to learn more about the user experience design process and the principles that make a design a good one.</p>
+      </DialogContent>
+    </Dialog>
+      <Contact contactOpen={contactOpen} setContactOpen={setContactOpen}/>
       <div className="HeaderBar">
         <h1>Portfolio</h1>
         <h1>Andrea Relova</h1>
@@ -82,7 +70,7 @@ function App() {
         <h1 className="Welcome2">welcome!</h1>
         <h1 className="Welcome">welcome!</h1>
       </div>
-        <p className="Tagline">My name is Andrea Relova. I'm a computer science student at the University of Florida.<br></br>I strongly believe that design can be both beautiful and accessible and I<br></br>plan on pursuing a career that helps me find the intersection of both.</p>
+        <p className="Tagline">My name is Andrea Relova. I'm a computer science student at the University of Florida. I strongly believe that design can be both beautiful and accessible and I plan on pursuing a career that helps me find the intersection of both.</p>
         <h3 className="Latest">Latest Projects:</h3>
         {projects.map((project, index)=>
           <a className="Link" key={index} href={project.link} target="blank">
@@ -111,12 +99,7 @@ function App() {
         <a href="https://dribbble.com/andrearelova" target="blank" className="linkText">
           <h3 className="FooterButtons">  Dribbble</h3>
         </a>
-        <Dialog open={aboutOpen} onClose={() => {setAboutOpen(false)}} TransitionComponent={Transition}>
-          <DialogContent className="AboutMe">
-            <h1 className="AboutMeTitle">About Me</h1>
-            <p className="AboutMeText">I'm a 20 year old computer science major from Jacksonville, Florida. I am also pursuing a minor in linguistics, which I chose because my experience with learning French and Spanish in school led me to realize that my passion for languages lies with learning about the structure, patterns and uses of it and less so with a specific language. I am very interested in interaction design, product design and user experience design and would like to pursue a career in such someday. I realized this because in my computer science projects, I have found the greatest satisfaction and sense of control from the design portion of the development processes. I continue to work on developing my "eye for design" and my sense of empathy everyday, since being a designer involves one putting themselves in the users' shoes.</p>
-          </DialogContent>
-        </Dialog>
+
         </div>
         <div className="FooterFiller"/>
       </footer>
