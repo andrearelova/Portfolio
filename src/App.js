@@ -31,7 +31,7 @@ function App() {
     {
       name:"Portfolio (This Website):",
       img:"portfolio-mockup.png",
-      description:"This portfolio website was created throughout the summer of 2020. The mockup above was made on Photoshop (because I created it before knowing how to use Adobe XD). The portfolio was made with React/Node and uses some Material UI styling components.",
+      description:"This portfolio website was created throughout the summer of 2020. The mockup above was made on Photoshop (because I created it before knowing how to use Adobe XD). The portfolio was made with React/Node and uses some Material UI styling components. I am continuing to work on making my portfolio mobile responsive.",
       link:""
     },
     {
