@@ -6,9 +6,8 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif, serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Baskervville', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 code {

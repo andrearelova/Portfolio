@@ -39,7 +39,7 @@
   position: absolute;
   width: 100%;
   top: 10px;
-  font-family: "Avenir Next";
+  font-family: "Montserrat";
   font-style: italic;
   font-size: 150px;
   text-align: center;
@@ -50,7 +50,7 @@
   position: absolute;
   width: 100%;
   left: -10px;
-  font-family: "Avenir Next";
+  font-family: "Montserrat";
   font-style: italic;
   font-size: 150px;
   text-align: center;
@@ -68,7 +68,7 @@
 
 .Latest{
   margin-top: 5vh;
-  font-family: "Avenir Next";
+  font-family: "Montserrat";
   font-style: italic;
   width: 100%;
   text-align: center;
@@ -78,7 +78,7 @@
 }
 
 .Projects{
-  font-family: "Avenir Next";
+  font-family: "Montserrat";
   font-style: italic;
   font-size: 25px;
   color: #0c3566;
@@ -150,7 +150,7 @@
 }
 
 .AboutMeTitle{
-  font-family: "Avenir Next";
+  font-family: "Montserrat";
   font-style: italic;
   font-size: 30px;
   color: #ffefd5;
@@ -183,7 +183,7 @@
 }
 
 .DiversiphiTitle{
-  font-family: "Avenir Next";
+  font-family: "Montserrat";
   font-style: italic;
   font-size: 25px;
   color: #0c3566;
