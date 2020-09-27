@@ -120,12 +120,12 @@ function App() {
           <p className="ProjectsDescription">{myDesign.description}</p>
           </div>
         )}
-        <h3 className="DiversiphiTitle">Diversiphi Rush Infographic</h3>
+        <h3 className="DiversiphiTitle">DiversiPhi Rush Infographic</h3>
         <img src="diversity-rush1.png" alt="" className="Diversiphi"/>
         <img src="diversity-rush2.png" alt="" className="Diversiphi"/>
         <img src="diversity-rush3.png" alt="" className="Diversiphi"/>
         <p className="DiversiphiDescription">I created this three page infographic (using Adobe Photoshop) for my sorority to provide tips on how to talk about diversity and inclusion during Panhellenic formal sorority recruitment. Diversiphi is my sorority's diversity and inclusion committee where I serve as one of the Innovation Chairs.</p>
-        <h3 className="DiversiphiTitle">Diversiphi Origami Activity Flyer</h3>
+        <h3 className="DiversiphiTitle">DiversiPhi Origami Activity Flyer</h3>
         <img src="DiversiPhi-Origami.png" alt="" className="Origami"/>
         <p className="DiversiphiDescription">I created this flyer (using Adobe InDesign) to advertise an origami workshop for my sorority led by the Diversity and Inclusion committee. </p>
       </div>
