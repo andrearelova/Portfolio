@@ -17,6 +17,12 @@ function App() {
   const [aboutOpen, setAboutOpen] = useState(false);
   const projects = [
     {
+      name:"Laundr Wireframes Presentation",
+      img:"Laundr-Wireframe.png",
+      description:"For my software engineering class, we were assigned a group project to create an e-commerce store for a local laundry company looking to release their new line of laundry detergent. I created these designed using Adobe XD for the first sprint of the project. We were asked to give a presentation that gives heavy emphasis on transition and interactions, so my designs are available in a Google Slides presentation with animations that walks the viewer through the interactions available.",
+      link:"https://docs.google.com/presentation/d/189T8bqCn4pFjnSHS7IXGPLt91wnSzTRz5kDeId-uccE/edit#slide=id.p"
+    }
+    {
       name:"Six:",
       img:"Six.png",
       description:"Six is a group web application created in July-August 2020 that is inspired by the \"Six Degrees of Kevin Bacon\" game. The web application asks the user to input two musical artists and then utilizes the Spotify Web API, along with a Breadth-First Search algorithm, to determine how many \"degrees of separation\" lie between the two artists (a song collaboration counts as one degree). I did the front end design and helped on the implementation of it. I also helped work on the API implementation. The project was created using React/Node.",
