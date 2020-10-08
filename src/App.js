@@ -19,7 +19,7 @@ function App() {
     {
       name:"Laundr Wireframes Presentation:",
       img:"Laundr-Wireframe.png",
-      description:"For my software engineering class, we were assigned a group project to create an e-commerce store for a local laundry company looking to release their new line of laundry detergent. I created these designed using Adobe XD for the first sprint of the project. We were asked to give a presentation that gives heavy emphasis on transition and interactions, so my designs are available in a Google Slides presentation with animations that walks the viewer through the interactions available.",
+      description:"For my software engineering class, we were assigned a group project to create an e-commerce store for a local online laundry company looking to release their new line of laundry detergent. I designed the webpages using Adobe XD. We were asked to give a presentation that gives heavy emphasis on transition and interactions, so my designs are available in a Google Slides presentation with annotations that walk the viewer through the available interactions.",
       link:"https://docs.google.com/presentation/d/189T8bqCn4pFjnSHS7IXGPLt91wnSzTRz5kDeId-uccE/edit#slide=id.p"
     },
     {
