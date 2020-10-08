@@ -21,7 +21,7 @@ function App() {
       img:"Laundr-Wireframe.png",
       description:"For my software engineering class, we were assigned a group project to create an e-commerce store for a local laundry company looking to release their new line of laundry detergent. I created these designed using Adobe XD for the first sprint of the project. We were asked to give a presentation that gives heavy emphasis on transition and interactions, so my designs are available in a Google Slides presentation with animations that walks the viewer through the interactions available.",
       link:"https://docs.google.com/presentation/d/189T8bqCn4pFjnSHS7IXGPLt91wnSzTRz5kDeId-uccE/edit#slide=id.p"
-    }
+    },
     {
       name:"Six:",
       img:"Six.png",
@@ -51,7 +51,7 @@ function App() {
     {
       name:"Design Process Diagram",
       img:"DesignProcess.png",
-      description: "This was a group diagram made for my User Experience Design class."
+      description:"This was a group diagram made for my User Experience Design class."
     },
   ]
 
