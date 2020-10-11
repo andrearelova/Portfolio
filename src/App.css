@@ -190,7 +190,7 @@
   padding-bottom: 3vh;
 }
 
-.DiversiphiTitle{
+.OtherTitle{
   font-family: "Montserrat";
   font-style: italic;
   font-size: 25px;
@@ -199,13 +199,13 @@
   width: 625px;
 }
 
-.Diversiphi{
+.DiversiphiInfog{
   width: 440px;
   height: 440px;
   padding-bottom: 3vh;
 }
 
-.DiversiphiDescription{
+.OtherDescription{
   font-family: "Baskerville";
   color: #0c3566;
   font-size: 20px;
@@ -213,6 +213,26 @@
   width: 625px;
 }
 
-.Origami{
+.Other{
   padding-bottom: 3vh;
+}
+
+.DesignProc{
+  padding-bottom: 3vh;
+  width: 600px;
+  height: 400px;
+}
+
+.Personas{
+  padding-bottom: 3vh;
+}
+
+.Panels{
+  padding-bottom: 3vh;
+  width: 1000px;
+}
+
+.SixWireframe{
+  padding-bottom: 3vh;
+  width: 600px;
 }
