@@ -129,7 +129,7 @@ function App() {
         <h3 className="OtherTitle">Control Panel Flyers:</h3>
         <img src="IndivProjMidpoint.png" alt="" className="Panels"/>
         <img src="CEN4722-Indiv-Final.png" alt="" className="Panels"/>
-        <p className="OtherDescription">For an individual project, we were assigned two different digital posters. For the first poster, we had to analyze 10 physical control panels' flaws and then make 10 potential redesigns of one of those flawed control panels. In the second poster, we were assigned to weave all the potential redesigns into one final redesign. Both posters were made with Adobe InDesign, but I made final redesign is from Adobe XD and then exported it as a PNG to the poster.</p>
+        <p className="OtherDescription">For an individual project, we were assigned two different digital posters. For the first poster, we had to analyze 10 physical control panels' flaws and then make 10 potential redesigns of one of those flawed control panels. In the second poster, we were assigned to weave all the potential redesigns into one final redesign. Both posters were made with Adobe InDesign, but the final redesign is from Adobe XD and then I exported it as a PNG to the second poster.</p>
       </div>
 
       <footer className="FooterBar">
