@@ -151,6 +151,9 @@ function App() {
       </div>
       <div className="Content">
         <h1 className="Latest">Some Other Designs:</h1>
+        <h3 className="OtherTitle">DiversiPhi Strong Girl Flyer:</h3>
+        <img src="DiversiPhi-StrongU.png" alt="" className="Other"/>
+        <p className="OtherDescription">This is a flyer I created (using Adobe InDesign) to advertise an online mental health program for my sorority.</p>
         <h3 className="OtherTitle">DiversiPhi Rush Infographic:</h3>
         <img src="diversity-rush1.png" alt="" className="DiversiphiInfog"/>
         <img src="diversity-rush2.png" alt="" className="DiversiphiInfog"/>
