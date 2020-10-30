@@ -200,8 +200,7 @@
 }
 
 .DiversiphiInfog{
-  width: 440px;
-  height: 440px;
+  width: 30%;
   padding-bottom: 3vh;
 }
 
@@ -234,5 +233,10 @@
 
 .SixWireframe{
   padding-bottom: 3vh;
-  width: 600px;
+  width: 40%;
+}
+
+.Halloween{
+  padding-bottom: 3vh;
+  width: 30%;
 }

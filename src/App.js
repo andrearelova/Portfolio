@@ -151,8 +151,8 @@ function App() {
       </div>
       <div className="Content">
         <h1 className="Latest">Some Other Designs:</h1>
-        <h3 className="OtherTitle">DiversiPhi Halloween Infographic</h3>
-        <img src="Halloween-Diversiphi.png" alt="" className="Other"/>
+        <h3 className="OtherTitle">DiversiPhi Halloween Infographic:</h3>
+        <img src="Halloween-Diversiphi.png" alt="" className="Halloween"/>
         <p className="OtherDescription">This is an infographic I made to remind members of my sorority about cultural appropriation and offensive Halloween costumes. I wanted to keep the design look of the infographic simple as to not trivialize a serious subject.</p>
         <h3 className="OtherTitle">DiversiPhi Strong Girl Flyer:</h3>
         <img src="DiversiPhi-StrongU.png" alt="" className="Other"/>
