@@ -24,7 +24,7 @@ const Contact = ({contactOpen, setContactOpen}) => {
 
   return <Dialog open={contactOpen} onClose={handleContactClose} TransitionComponent={Transition}>
     <DialogContent className="ContactMe">
-    <h1>Send a message to andreamrelova@gmail.com:</h1>
+    <h1>Send a message to andreamrelova@gmail.com :</h1>
     <form className="ContactForm" onSubmit={(e) => submitEmail(e)}>
       <TextField variant="standard" label="Your Email" required={true} value={email} onChange={(e)=>{e.preventDefault(); setEmail(e.target.value)}}/>
       <TextField variant="standard" label="Message" required={true} value={message} onChange={(e)=>{e.preventDefault(); setMessage(e.target.value)}}/>
